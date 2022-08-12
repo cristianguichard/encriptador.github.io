@@ -1,46 +1,43 @@
 body{
     background: #E5E5E5;
-   
-    
 }
 .logo {
     position: absolute;
     left: 6px;
     top: 40px;
-   
 }
 .caja-muñeco {
     position: absolute;
     width: 21%;
-    height: 550px;
+    height: 90%;
     right: 40px;
     top: 40px;
     background: #FFFFFF;
     box-shadow: 0px 24px 32px -8px rgba(0, 0, 0, 0.08);
     border-radius: 32px;
-    text-align: center;
 }
 
-.muneco{
-    width: 70%;
+.muneco {
     position: relative;
     top: 30%;
+    width: 70%;
+    left: 16%;
 }
+
 .ningun-mensaje{
-    position:absolute;
-    font-weight: 700px;
+    position: relative;
+    text-align: center;
     font-size: 24px;
-    bottom: 180px;
+    top: 30%;
     opacity: 0.8;
-    left: 40px;
-    
 }
 .ingresa-texto {
-    position: absolute;
+    position: relative;
+    text-align: center;
     font-weight: 336px;
     font-size: 16px;
     color: #495057;
-    bottom: 143px;
+    top: 32%;
 }
 .input{
     position: absolute;
@@ -60,22 +57,36 @@ body{
 .input::placeholder{
     color: #0A3871;
 }
-.vector{
+.botones{
     position: absolute;
-    bottom: 114px;
-    left: 180px;
+    bottom: 40px;
+    left: 100px;   
+    
+}
+.botones button{
+    display: inline;
+    margin: 0 0 0 80px;
+}
+.vector-letras{
+    position: absolute;
+    bottom: 72px;
+    left: 75px;
+}
+.vector{
+    
+    display: inline-block;
+    bottom: 40px;
+   
 }
 .letras-minusculas{
-    position: absolute;
+   
+    display: inline-block;
+    bottom: 40px;
     color: #495057;
-    bottom: 114px;
-    left: 200px;
     opacity: 0.8;
 }
 .boton-encriptar {
-    position: absolute;
-    bottom: 45px;
-    left: 180px;
+
     background: #0A3871;
     color: #E5E5E5;
     width: 328px;
@@ -85,13 +96,12 @@ body{
 }
 
 .boton-desencriptar {
-    position: absolute;
-    right: 362px;
-    bottom: 45px;
+   
     background: #D8DFE8;
     color: #0A3871;
     width: 328px;
     height: 67px;
+    margin-left: 0%;
     border-width: 1px;
     border-style: 1px;
     border-radius: 20px;
