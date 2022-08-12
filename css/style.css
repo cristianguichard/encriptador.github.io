@@ -1,5 +1,7 @@
 body{
     background: #E5E5E5;
+   
+    
 }
 .logo {
     position: absolute;
@@ -10,30 +12,88 @@ body{
 .caja-muñeco {
     position: absolute;
     width: 21%;
-    height: 944px;
+    height: 550px;
     right: 40px;
-    left: 1000px;
     top: 40px;
     background: #FFFFFF;
     box-shadow: 0px 24px 32px -8px rgba(0, 0, 0, 0.08);
     border-radius: 32px;
     text-align: center;
 }
-.escribe{
-    position: absolute;
-    width: 577px;
-    height: 48px;
-    left: 240px;
-    top: 168px;
 
+.muneco{
+    width: 70%;
+    position: relative;
+    top: 30%;
+}
+.ningun-mensaje{
+    position:absolute;
+    font-weight: 700px;
+    font-size: 24px;
+    bottom: 180px;
+    opacity: 0.8;
+    left: 40px;
+    
+}
+.ingresa-texto {
+    position: absolute;
+    font-weight: 336px;
+    font-size: 16px;
+    color: #495057;
+    bottom: 143px;
+}
+.input{
+    position: absolute;
+    width: 50%;
+    height: 48px;
+    left: 180px;
+    top: 168px;
+    background: #E5E5E5;
     font-family: 'Inter';
     font-style: normal;
     font-weight: 400;
     font-size: 32px;
     line-height: 150%;
+    border: none;
+    
 }
-.muneco{
-    width: 92%;
-    position: relative;
-    top: 30%;
+.input::placeholder{
+    color: #0A3871;
+}
+.vector{
+    position: absolute;
+    bottom: 114px;
+    left: 180px;
+}
+.letras-minusculas{
+    position: absolute;
+    color: #495057;
+    bottom: 114px;
+    left: 200px;
+    opacity: 0.8;
+}
+.boton-encriptar {
+    position: absolute;
+    bottom: 45px;
+    left: 180px;
+    background: #0A3871;
+    color: #E5E5E5;
+    width: 328px;
+    height: 67px;
+    border-width: 1px;
+    border-radius: 20px;
+}
+
+.boton-desencriptar {
+    position: absolute;
+    right: 362px;
+    bottom: 45px;
+    background: #D8DFE8;
+    color: #0A3871;
+    width: 328px;
+    height: 67px;
+    border-width: 1px;
+    border-style: 1px;
+    border-radius: 20px;
+    border-color: #0A3871;
 }
