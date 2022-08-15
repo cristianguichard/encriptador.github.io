@@ -83,7 +83,9 @@ body{
     border: none;
     
 }
-
+.input:focus{
+    border: none;
+}
 .input::placeholder{
     color: #0A3871;
 }

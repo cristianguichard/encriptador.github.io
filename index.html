@@ -16,7 +16,7 @@
         <div class="caja-encriptador">
             <div class="caja-resultado"id="caja-resultado">
                 <h3 id="mensaje-encriptado"class="mensaje-encriptado"></h3>
-                <button onclick=copy() class="boton-copiar"id="copiar">Copiar</button>
+                <button onclick=copyToClickBoard() class="boton-copiar"id="copiar">Copiar</button>
             </div>
             <div class="texto-inicial" id="texto-inicial">
                 <img id="muneco"class="muneco" src="imagenes/Muñeco.png" alt="muneco">
@@ -34,7 +34,7 @@
             </div>
 
             <button class="boton-encriptar" onclick=encriptar()>Encriptar</button>
-            <button class="boton-desencriptar">Desencriptar</button>
+            <button class="boton-desencriptar" onclick=desencriptar()>Desencriptar</button>
         </div>
     <script src="javascript/funciones.js"></script>     
     <footer>
