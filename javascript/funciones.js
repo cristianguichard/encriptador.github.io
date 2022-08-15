@@ -32,6 +32,7 @@ function recorrerVocales(vocal){
 
 function encriptar() {
 
+
    var input = document.querySelector("input");
    var texto = input.value;
    var largoTexto = texto.length;
@@ -62,12 +63,74 @@ function encriptar() {
 
        } else {
          var textoEncriptado = textoEncriptado + texto[posicion];
-       }
-   }  console.log(textoEncriptado);
+        }
 
+   }  
+   document.getElementById("mensaje-encriptado").innerHTML = textoEncriptado;
+      mostrar();
+      ocultar();
+     
+    
+      
+}
+
+function desencriptar() {
+    var input = document.querySelector("input");
+    var texto = input.value;
+    var largoTexto = texto.length;
+    var textoEncriptado = "";
+   
+     for (var posicion = 0; posicion < largoTexto; posicion++){
+      
+        if (recorrerVocales(texto[posicion])){
+ 
+         var vocal = recorrerVocales(texto[posicion]);
+ 
+             if (vocal == "a"){
+                 var a = "ai";
+                 var textoEncriptado = textoEncriptado + a;
+             } else if (vocal == "e"){
+                 var e = "enter";
+                 var textoEncriptado = textoEncriptado + e;
+             } else if (vocal == "i"){
+                 var i = "imes";
+                 var textoEncriptado = textoEncriptado + i;
+             } else if (vocal == "o"){
+                 var o = "ober";
+                 var textoEncriptado = textoEncriptado + o;
+             } else if (vocal == "u"){
+                 var u = "ufat";
+                 var textoEncriptado = textoEncriptado + u;
+             }
+ 
+        } else {
+          var textoEncriptado = textoEncriptado + texto[posicion];
+         }
+ 
+    }  
+    document.getElementById("mensaje-encriptado").innerHTML = textoEncriptado;
+       mostrar();
+       ocultar();
+      
+     
+       
+ }
+function mostrar(){
+    document.getElementById("caja-resultado").style.display ="flex";
 
 }
 
-var button = document.querySelector("button");
+function ocultar(){
 
-button.onclick = encriptar;
+    document.getElementById("texto-inicial").style.display = "none";
+}
+
+function copy() {
+    let copyText = document.getElementById("mensaje-encriptado");
+    copyText.select();
+    document.execCommand("copy");
+    alert("Copiado");
+  }
+//var button = document.querySelector("button");
+
+//button.onclick = encriptar;
