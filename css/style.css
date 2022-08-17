@@ -1,157 +1,110 @@
+*{
+    margin:0;
+    box-sizing: border-box;
+}
 body{
-    background: #E5E5E5;
 
-}
-.logo{
-    position: absolute;
-    top:5%;
-}
-.caja-encriptador {
-    position: absolute;
-    top: 5%;
-    right: 3%;
-    bottom: 5%;
-    width: 25%;
-    height: 80%;
-    background: #FFFFFF;
-    box-shadow: 0px 24px 32px -8px rgba(0, 0, 0, 0.08);
-    border-radius: 32px;
-}
-.caja-encriptador .texto-inicial{
-    position: absolute;
-    width: 50%;
-    margin-left: 25%;
-    top: 25%;
-}
-.caja-encriptador .caja-resultado{
-    display: none;
-}
-.caja-encriptador .muneco{
-    width: 100%;
-}
-.caja-encriptador .ningun-mensaje{
-    text-align: center;
-    margin: 20px 0;
-    font-size: 24px;
-    top: 30%;
-    opacity: 0.8;
-}
-.caja-encriptador .ingresa-texto {
-    text-align: center;
-    font-weight: 336px;
-    font-size: 16px;
-    color: #495057;
-    top: 32%;
-}
-
-.caja-resultado .mensaje-encriptado{
-        position: absolute;
-        width: 50%;
-        margin-left: 25%;
-        top: 25%;
-        text-align: center;
-        font-size: 24px;
-        line-height: 36px;
-        color: #495057;
-}
-.caja-resultado .boton-copiar {
-    position: absolute;
-    width: 50%;
-    height: 10%;
-    margin-left: 25%;
-    bottom: 5%;
-    background: #D8DFE8;
-    color: #0A3871;
-    border-width: 1px;
-    border-style: 1px;
-    border-radius: 20px;
-    border-color: #0A3871;
-}
-
-.input{
-    position: absolute;
-    width: 50%;
-    height: 48px;
-    left: 180px;
-    top: 168px;
     background: #E5E5E5;
     font-family: 'Inter';
     font-style: normal;
-    font-weight: 400;
-    font-size: 32px;
-    line-height: 150%;
-    border: none;
-    
+    text-align: center;
+}
+h1{ font-size: 1em;}
+h2{ font-size: 1.8em;}
+h3{ font-size: 1em;}
+p{ font-size: 3em;}
+
+.header img{
+  border-top: 10px;
+}
+button{
+    background-color:  #D8DFE8;
+    font-size: 1.3em;
+    padding: 10px 40px;
+    border-radius: 10px;
+    border: 1px solid #0A3871;
+    box-shadow: 2px 2px 10px rgba(0,0,0,0.5);
+    color:#0A3871;
+    margin: 10px 10px;
+}
+button:hover{
+    background: #abadb0;
 }
 
+
+.container{
+    width: 90%;
+    min-height: 900px;
+    margin: 0 auto;
+    padding: 20px;
+    border: 1px solid #000;
+}
+
+header .logo{
+     color: #0A3871;
+     margin: 0%;
+     padding: 25px 30px;
+}
+
+.input{
+   
+    background: #E5E5E5;
+    font-weight: 400;
+    font-size: 32px;
+    
+    border: none;
+}
 .input:focus {
     outline: none !important;
     border:0px solid white;
     box-shadow: 0 0 10px #719ECE;
-  }
+    }
 .input::placeholder{
     color: #0A3871;
 }
 
-.botones{
-    position: absolute;
-    bottom: 15%;
-    left: 100px;   
-    
+.boton-encriptar{
+    background-color: #0A3871;
+    color: #D8DFE8;
 }
 
-.botones button{
-    display: inline;
-    margin: 0 0 0 70px;
-}
-.boton-encriptar {
-    background: #0A3871;
-    color: #E5E5E5;
-    width: 328px;
-    height: 67px;
-    border-width: 1px;
-    border-radius: 20px;
+
+#texto{
+
+    background-color: #D8DFE8;
+    border-radius: 30px;
+  
 }
 
-.boton-desencriptar {
-    background: #D8DFE8;
-    color: #0A3871;
-    width: 328px;
-    height: 67px;
-    margin-left: 0%;
-    border-width: 1px;
-    border-style: 1px;
-    border-radius: 20px;
-    border-color: #0A3871;
+.muneco{
+  width: 200px;
 }
-.vector-letras{
-    position: absolute;
-    bottom: 72px;
-    left: 75px;
+#container__mensaje_encriptado{
+    display: none;
+    text-align: center;
+    align-items: center;
+    justify-items: center;
 }
-.vector{
-    
-    display: inline-block;
-    bottom: 40px;
-   
-}
-.letras-minusculas{
-   
-    display: inline-block;
-    bottom: 40px;
-    color: #495057;
-    opacity: 0.8;
+.boton-copiar{
+
 }
 footer{
+  
+    text-align: center;
     background-color: #0A3871;
-    width: 100%;
-    height: 10%;
-    position: absolute;
-    bottom: 0px;
+    margin: 0;
+    padding: 10px 20px;
 }
+footer .redes{
+    align-items: center;
+}
+
+footer img{
+    width: 40px;
+    height: 40px;
+}
+
 footer li{
-   display: inline-block;
-}
-footer a{
-    color: #FFFFFF;
+    display: inline-block;
+   margin: 0;
 }
