@@ -1,6 +1,10 @@
 *{
     margin:0;
     box-sizing: border-box;
+    padding: 0;
+}
+html{
+    height: 100%;
 }
 body{
 
@@ -8,103 +12,211 @@ body{
     font-family: 'Inter';
     font-style: normal;
     text-align: center;
-}
-h1{ font-size: 1em;}
-h2{ font-size: 1.8em;}
-h3{ font-size: 1em;}
-p{ font-size: 3em;}
-
-.header img{
-  border-top: 10px;
+    min-height: 100%;    
 }
 button{
-    background-color:  #D8DFE8;
-    font-size: 1.3em;
-    padding: 10px 40px;
-    border-radius: 10px;
-    border: 1px solid #0A3871;
-    box-shadow: 2px 2px 10px rgba(0,0,0,0.5);
-    color:#0A3871;
-    margin: 10px 10px;
-}
-button:hover{
-    background: #abadb0;
-}
-
-
-.container{
     width: 90%;
-    min-height: 900px;
-    margin: 0 auto;
-    padding: 20px;
-    border: 1px solid #000;
-}
-
-header .logo{
-     color: #0A3871;
-     margin: 0%;
-     padding: 25px 30px;
-}
-
-.input{
-   
-    background: #E5E5E5;
-    font-weight: 400;
-    font-size: 32px;
-    
-    border: none;
-}
-.input:focus {
-    outline: none !important;
-    border:0px solid white;
-    box-shadow: 0 0 10px #719ECE;
-    }
-.input::placeholder{
+    height: 50px;
+    margin: 10px;
+    border-radius: 30px;
+    background-color: #D8DFE8;
+    border: 1px solid gray;
     color: #0A3871;
 }
-
+button:hover{
+    cursor:pointer;
+}
 .boton-encriptar{
-    background-color: #0A3871;
+    background: #0A3871;
     color: #D8DFE8;
 }
+.boton-encriptar:hover{
+    background-color: #04152b;
+}
+.boton-desencriptar:hover{
+    background-color: #8a8d91;
+}
+.input{
+width: 300px;
+text-align: center;
+background: #E5E5E5;
+border: none;
+font-size: 40px;
+color: #0A3871;
+}
 
-
-#texto{
-
-    background-color: #D8DFE8;
+.container_input:focus {
+outline: none !important;
+border:0px solid white;
+box-shadow: 0 0 10px #719ECE;
+}
+.input::placeholder{
+color: #0A3871;
+font-size: 30px;
+}
+.container > *{
     border-radius: 30px;
-  
-}
-
-.muneco{
-  width: 200px;
-}
-#container__mensaje_encriptado{
-    display: none;
     text-align: center;
-    align-items: center;
-    justify-items: center;
 }
-.boton-copiar{
+.container_header{
+    grid-area: header;
+}
+.container_input{
+    grid-area: input;
+}
+.container_vector-letras{
+    grid-area: letras;
+}
+.container_botones{
+    grid-area: botones;
+}
+.container-texto-inicial{
+    grid-area: mensajes;
+}
 
+.container_footer{
+    grid-area: footer;
 }
-footer{
+.container{
+    display: grid;
+    gap: 10px;
+    grid-template-rows: auto auto auto auto auto auto auto;
+    grid-template-areas: 
+    "header"
+    "input"
+    "letras"
+    "botones"
+    "mensajes"
   
-    text-align: center;
-    background-color: #0A3871;
-    margin: 0;
-    padding: 10px 20px;
+    "footer"
+    ;
 }
-footer .redes{
-    align-items: center;
-}
+.container_header img{
+    margin: 10px;
 
-footer img{
-    width: 40px;
-    height: 40px;
 }
-
-footer li{
+#container-texto-inicial{
+   
     display: inline-block;
-   margin: 0;
+    background-color: #fff;
+    margin: 0 auto;
+    padding: 0;
+    width: 90vw;
+    height: 40vh;
+    border-radius: 30px;
+}
+.container__mensaje_encriptado{
+    display: none;
+}
+.ningun-mensaje{
+    position: relative;
+    top: 100px;
+    font-weight: bold;
+}
+.ingresa-texto{
+    position: relative;
+    top: 100px;
+    
+}
+.mensaje-encriptado{
+    color: #0A3871;
+    position: relative;
+    font-size: 2em;
+    top: 100px;
+    vertical-align: middle;
+}
+.muneco{
+    display: none;
+} 
+.boton-copiar{
+    display: none;
+    position: absolute;
+    margin: 0 auto;
+    bottom: 70px;
+}   
+.container .container_footer{
+    position: fixed;
+    bottom: 0;
+    width: 100vw;
+    border-radius: 0;
+    background-color: #0A3871;
+}
+.container_footer li{
+    display: inline;
+}
+.container_footer img{
+    width: 40px;
+}
+
+@media screen and (min-width: 600px){
+      .container_header img{
+        position: static;
+        display: block;
+        left: 0px;
+      }
+      .container{
+      
+        grid-template: 
+        "header header" 100px
+        "input mensajes"  50px
+        "letras mensajes"  auto
+        "botones mensajes" auto
+        "footer footer" 100px
+        ;
+    }
+    button{
+        width: 50%;
+        
+    }
+
+    .container_botones{
+    position: relative;
+    top: 15rem;
+    left: 1rem;
+    display: inline-flex;
+
+    }
+    .container_vector-letras{
+        display: flex;
+        position: relative;
+        top: 15rem;
+        left: 2rem;
+
+    }
+    #container-texto-inicial{
+
+        width: 50vw;
+        height: 60vh;
+        
+    }
+    .container-texto-inicial{
+        grid-area: mensajes;
+        
+    }
+    #container__mensaje_encriptado{
+   
+
+        width: 50vw;
+        height: 60vh;
+    }
+    .muneco{
+        width: 40%;
+        position: relative;
+        top:100px;
+        margin: 0% auto;
+        display: initial;
+    }
+  
+    .mensaje-encriptado{
+        position: relative;
+        font-size: 2em;
+        top: 100px;
+        
+    }
+    .boton-copiar{
+        position: relative;
+        display: initial;
+        top: 300px;
+        margin: auto;
+    }
 }

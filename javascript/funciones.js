@@ -31,7 +31,7 @@ function recorrerVocales(vocal){
 function validar(texto) {
  
         var texto = texto;
-        let letrasValidas = "abcdefjhijklmnñopqrstuvwxyz¿?¡! ";
+        let letrasValidas = "abcdefgjhijklmnñopqrstuvwxyz¿?¡! ";
     
         for (let letra of texto) {
             if (!letrasValidas.includes(letra)) {
@@ -87,20 +87,23 @@ function encriptar() {
         }
 
     }  
+    
     document.getElementById("mensaje-encriptado").innerHTML = textoEncriptado;
         mostrar();
         ocultar();
      
     }     
 }
+
 function desencriptar() {
+
     var input = document.querySelector("input");
     var texto = input.value;
 
     if(validar(texto)){
         alert("No ingreses Mayusculas ni acentos");
-    
-       } else {
+
+        } else {
     
     var textoCifrado = texto.replace(/ai/g, "a").replace(/enter/g, "e").replace(/imes/g, "i").replace(/ober/g, "o").replace(/ufat/g, "u");
 
@@ -110,12 +113,17 @@ function desencriptar() {
       mostrar();
       ocultar();
        }   
+
 }
 function mostrar(){
-    document.getElementById("container__mensaje_encriptado").style.display ="block";
+         document.getElementById("container__mensaje_encriptado").style.display = "block";
+         document.getElementById("copiar").style.display = "block";
 }
 function ocultar(){
-    document.getElementById("texto-inicial").style.display = "none";
+    document.getElementById("muneco").style.display = "none";
+    document.getElementById("ningun-mensaje").style.display = "none";
+    document.getElementById("ingresa-texto").style.display = "none";
+    
 }
 function copyToClickBoard(){
     var content = document.getElementById('mensaje-encriptado').innerHTML;

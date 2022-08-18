@@ -13,59 +13,43 @@
 
         <div class="container">
               
-                <header>
-                        <div class="header">
+                <header class="container_header">
                             <img class="logo"src="imagenes/Logo.png" alt="logo">
-                        </div>
                 </header>
             
-        <main>
-                <section id="main">
-                    <div class="input">
-
-                        <input autofocus class="input" type="text" placeholder="Ingrese el texto aquí">
-
+                    <div class="container_input">
+                                    <input autofocus class="input" type="text" placeholder="Ingrese el texto aquí">
                     </div>
-                    <div class="botones">
-            
-                        <div class="vector-letras">
-            
+                    
+                    <div class="container_vector-letras">
                             <img class="vector"src="imagenes/Vector.png" alt="vector">
                             <h3 class="letras-minusculas">Solo letras minúsculas y sin acentos</h3>
-            
-                        </div>
-            
-                        <button class="boton-encriptar" onclick=encriptar()>Encriptar</button>
-                        <button class="boton-desencriptar" onclick=desencriptar()>Desencriptar</button>
-            
                     </div>
-            
-                </section>
-                
-                <section id="texto">
-            
-                        <div class="texto" id="texto-inicial">
-            
-                            <img id="muneco"class="muneco" src="imagenes/Muñeco.png" alt="muneco">
-                            <h2 id="ningun-mensaje"class="ningun-mensaje">Ningún mensaje fue encontrado</h2>
-                            <h3 class="ingresa-texto">Ingresa el texto que desees encriptar o desencriptar.</h3>
-
-                            <div class="container__mensaje_encriptado" id="container__mensaje_encriptado">
-                                <h3 id="mensaje-encriptado"class="mensaje-encriptado"></h3>
-                                <button onclick=copyToClickBoard() class="boton-copiar"id="copiar">Copiar</button>
-                            </div>
-                        </div>
+                    <div class="container_botones">
+                                <button class="boton-encriptar" onclick=encriptar()>Encriptar</button>
+                                <button class="boton-desencriptar" onclick=desencriptar()>Desencriptar</button>
+                    </div>
                         
-            
-                </section>
-        </main> 
+                    <div id="container-texto-inicial" class="texto" >
+                
+                                <img id="muneco"class="muneco" src="imagenes/Muñeco.png" alt="muneco">
+                                <h2 id="ningun-mensaje"class="ningun-mensaje">Ningún mensaje fue encontrado</h2>
+                                <h3 id="ingresa-texto"class="ingresa-texto">Ingresa el texto que desees encriptar o desencriptar.</h3>
+
+                    
+
+                    <div class="container__mensaje_encriptado" id="container__mensaje_encriptado">
+                                    <h3 id="mensaje-encriptado" class="mensaje-encriptado"></h3>
+                                    <button onclick=copyToClickBoard() class="boton-copiar"id="copiar">Copiar</button>
+                    </div>
+                    </div>
           
-                <footer>
-                        <ul class="redes">
-                            <li><a href="https://315play.app/"><img src="imagenes/red-mundial.png" alt="315 play"></a></li>
-                            <li><a href="https://www.linkedin.com/in/cristian-guichard-productor/"><img src="imagenes/linkedin.png" alt="linkedin"></a></li>
-                            <li><a href="https://www.315.cl"><img src="imagenes/red-mundial.png" alt="315"></a></li>
-                        </ul>
+                <footer class="container_footer">
+                    <ul class="redes">
+                        <li><a href="https://315play.app/" target="_blank"><img src="imagenes/red-mundial.png" alt="315 play"></a></li>
+                        <li><a href="https://www.linkedin.com/in/cristian-guichard-productor/" target="_blank"><img src="imagenes/linkedin.png" alt="linkedin"></a></li>
+                        <li><a href="https://www.315.cl" target="_blank"><img src="imagenes/red-mundial.png" alt="315"></a></li>
+                    </ul>
                 </footer>
         </div>
 </body>
