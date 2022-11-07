@@ -1,0 +1,166 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+:root{
+    --color-principal:#0A3871;
+    --color-secundario:#ffffff;
+    --color-gris:#E5E5E5;
+}
+
+header{
+    height: 50px;
+    margin-top: 10px;
+    margin-left: 10px;
+}
+button{
+    width: 317px;
+    padding: 20px;
+    height: 50px;
+    margin-bottom: 10px;
+    border-radius: 20px;
+    border: 1px solid var(--color-principal);
+    background-color: var(--color-principal);
+    color: var(--color-secundario);
+    cursor: pointer;
+}
+button:hover{
+    background-color: var(--color-gris);
+    color:var(--color-primario)
+}
+/*---------INSTRUCCIONES--------*/
+
+.instrucciones{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    text-align: center;   
+}
+.instrucciones h1{
+    margin-bottom: 20px;
+    color: var(--color-principal);
+}
+.instrucciones p{
+    color: var(--color-principal);
+    font-style: italic;
+    padding: 20px;
+}
+.lista{
+    justify-items: auto;
+    color: var(--color-principal);
+} 
+
+/*--------INICIO-------*/
+#inicio{
+  display: flex;
+  justify-content: center;
+
+}
+.container_inicio{
+    display: flex;
+    flex-direction: column;
+    height: 63vh; 
+    justify-content: center;
+    align-items: center;  
+}
+.boton-agregar-palabras{
+  background-color: var(--color-gris);
+  color: var(--color-principal);
+}
+.boton-2:hover{
+    background-color: var(--color-principal);
+    color: var(--color-secundario);
+}
+.boton-2{
+    background-color: var(--color-gris);
+    color: var(--color-principal);
+}
+/*--------INGRESA UNA PALABRA-------*/
+#ingrese-palabra{
+    display: none;
+    justify-content: center;
+}
+.container_ingrese_una_palabra{
+    height: 90vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+}
+
+.input{
+    font-size: 18px;
+    height: 50px;
+    width: 630px;
+    border: 0px;
+   
+}
+.input::placeholder{
+    color: var(--color-principal);
+    font-size: 30px;
+}
+.container-vector{
+    display: flex;
+    width: auto;
+}
+.container-vector p{
+    margin-bottom: 10px;
+}
+.container-vector img{
+    width:20px;
+    height: 20px;
+    margin-right: 10px;
+}
+/*-----------Juego----------*/
+#juego{
+ display: none;
+ justify-content: center;
+ flex-direction: column; 
+}
+   
+.container_juego{
+padding: 20px;
+margin: 0 auto;
+display: none;    
+
+justify-content: center;
+align-items: flex-end;
+}
+.boton-juego{
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    align-items: center;    
+}
+.nuevo-juego{
+    margin-right: 20px;
+}
+
+.container_footer{
+    display: flex;
+    position: absolute;
+    bottom: 0px;
+    justify-content: center;
+    width: 100%;
+    height: 43px;
+    background-color: var(--color-principal);
+}
+.redes{
+    display: flex;
+    height: 100px;
+   
+}
+.redes img{
+    width: 40px;
+}
+@media screen and (max-width :600px){
+    .vector-botones{
+        display: flex;
+        justify-content: flex-start;
+        flex-direction: column;
+    }
+    .container_botones{
+        display: flex;
+        flex-direction: column;
+    }   
+}

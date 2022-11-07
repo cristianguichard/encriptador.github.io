@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>El Ahorcado</title>
+  
+</head>
+<body>
+    <header>
+        <img src="/imagenes/logo.png" alt="">
+    </header>
+    <main>
+       <section id="instrucciones">
+
+
+                <div class="instrucciones">
+                  <div class="texto">
+                      <h1>El AHORCADO</h1>
+                      <p>El Ahorcado es un juego de adivinanza donde el usuario busca a través de letras descubrir la palabra propuestas.</p>
+                      
+                  </div>
+                  <div class="lista">
+                     
+                          <div>
+                            <li>Para iniciar el juego presiona "iniciar el juego</li>
+                            <li>Si deseas agregar nuevas palabras presiona el boton "Agregar nuevas palabras"</li>
+                          </div>
+                      
+                  </div>
+                </div>
+
+        
+
+       </section>
+        <section id="inicio">
+            <div class="container_inicio">
+                <button onclick="iniciar()"class="boton-iniciar">Iniciar Juego</button>
+                <button onclick="mostrarPalabra()" class="boton-2">Agregar nueva palabra</button>
+            </div>
+        </section>
+     
+        <section id="juego">
+           
+            <canvas id="canvas" width="1280" height="520"></canvas>
+            
+            <div class="container_juego">
+               
+               <div class="boton-juego">
+                 <button class="nuevo-juego" onclick="iniciar()">Nuevo Juego</button>
+                 <button class="boton-2" onclick="cancelar()">Desistir</button>
+               </div>
+
+            </div>
+
+        </section>
+
+        <section id="ingrese-palabra" >
+
+            <div class="container_ingrese_una_palabra">
+
+                <input id="ingrese"class="input"type="text" placeholder="Ingrese una palabra">
+
+                <div class="vector-botones">
+
+                        <div class="container-vector">
+                            <img src="imagenes/Vector.png" alt="">
+                            <p>Max de 8 letras</p>
+                        </div>
+
+                        <div class="container_botones">
+                            <button class="guardar" onclick="guardar()">Guardar</button>
+                            <button class="boton-2" onclick="cancelar()">Cancelar</button>
+                        </div>
+
+                </div>
+
+            </div>
+            
+        </section>
+
+
+    </main>
+    <footer class="container_footer">
+        <ul class="redes">
+            <li><a href="https://315play.app/" target="_blank"><img src="imagenes/red-mundial.png" alt="315 play"></a></li>
+            <li><a href="https://www.linkedin.com/in/cristian-guichard-productor/" target="_blank"><img src="imagenes/linkedin.png" alt="linkedin"></a></li>
+            <li><a href="https://www.315.cl" target="_blank"><img src="imagenes/red-mundial.png" alt="315"></a></li>
+        </ul>
+    </footer>
+    <script src="script.js"></script>
+    <script src="canvas.js"></script>
+</body>
+</html>
